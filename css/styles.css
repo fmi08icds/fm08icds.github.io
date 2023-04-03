@@ -10831,7 +10831,7 @@ html {
 }
 
 .page-section {
-  padding: 6rem 0;
+  padding: 1.5rem 0;
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;
@@ -10980,6 +10980,7 @@ html {
 }
 .masthead .masthead-avatar {
   width: 15rem;
+  border-radius: 50%;
 }
 
 @media (min-width: 992px) {
@@ -11043,4 +11044,24 @@ html {
 
 .copyright {
   background-color: #1a252f;
+}
+.schedule-tbl .schedule-readings ul {
+  padding: 0;
+  padding-left: 15px;
+  margin: 0;
+  text-indent: -0.4em;
+  font-size: 0.8em;
+  line-height: 1.3em;
+}
+
+.schedule-tbl .schedule-readings li {
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+}
+.schedule-tbl .schedule-slides {
+  white-space: nowrap;
+  font-size: 1em;
+}
+.schedule-tbl .schedule-notes {
+  font-size: 0.8em;
 }
