@@ -9,31 +9,79 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <!-- <script src="https://d3js.org/d3.v4.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js">
+
+    </script>
     <title>fmi08icds</title>
   </head>
   <body>
     <div>
-      <div class="row align-items-center" style="height: 100vh;">
-        <div class="mx-auto col-10 col-md-8 col-lg-6">
+      <div class="row align-items-center" style="height: 40vh;">
+        <div class="mx-auto col-10 col-md-8 col-lg-8">
           <!-- Form -->
-          <form class="form-example" >
-            <h1>FMI08ICDS: Checking mark system</h1>
-            <p class="description">
-              A tutorial on how to align a "form" in Bootstrap 4 and 5.
+          <form class="form-example needs-validation" id="formMark" novalidate>
+            <h1>FMI08ICDS: <text class="fw-lighter fs-3 inline"> Introductory Computing for Data Science</text></h1>
+            <p class="description fw-light">
+              Details on your marks computation are provided in the main course website.
             </p>
             <!-- Input fields -->
             <div class="form-group">
-              <label for="mat">Matricule</label>
-              <input type="text" class="form-control mat" id="mat" placeholder="Enter your student matricule"
-                name="mat"/>
+              <!-- <label for="mat">Matricule</label> -->
+              <input type="text" class="form-control" id="mat" placeholder="Enter your matriculation number"
+                name="mat" value="" required>
+                <div class="invalid-feedback" id="notvalid">
+                  Please enter your matriculation number.
+                </div>
+
+              <button type= "submit" class="btn btn-primary btn-customized mt-4" onclick="getMark(event)">
+                See my mark
+              </button>
+              <button type="reset" class="btn btn-danger btn-customized mt-4" onclick="resetForm(event)">
+                Reset
+              </button>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-customized mt-4" onclick="getMark()">
-              View my mark
-            </button>
           </form>
           <!-- Form end -->
         </div>
+
+
+      </div>
+      <div class="row align-items-center mt-4 " >
+
+        <div class="mx-auto col-10 col-md-8 col-lg-8">
+          <table class="table table-hover" id="markTable">
+              <thead class="table-light">
+                  <tr>
+                      <th scope="col">Nachname</th>
+                      <th>Vorname</th>
+                      <th scope="col">HW1</th>
+                      <th scope="col">HW2</th>
+                      <th scope="col">HW3</th>
+                      <th scope="col">HW4</th>
+                      <th scope="col">HW5</th>
+                      <th scope="col">HW6</th>
+                      <th scope="col">HW7</th>
+                      <th scope="col">GW1</th>
+                      <th scope="col">GW2</th>
+                      <th scope="col">GW3</th>
+                      <th scope="col">Average %</th>
+                      <th scope="col">Final mark</th>
+                    </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+        </div>
+
+        <div class="row align-items-center mt-4">
+
+          <div class="mx-auto col-10 col-md-8 col-lg-8" id="markInfo">
+
+          </div>
+
       </div>
     </div>
 
@@ -47,20 +95,7 @@
     <script
       src="../js/mark.js"
     ></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script >
-      url = "https://github.com/fmi08icds/fmi08icds.github.io/blob/main/js/marks.csv";
-      d3.csv(url, function(data) {
-          console.log("Loading data....")
-          for (var i = 0; i < data.length; i++) {
-              //if (data[i].Matrile === number()) {
-                console.log(data[i]);
-                console.log(data[i]);
-            //  }
 
-          }
-      });
 
-    </script>
   </body>
 </html>
