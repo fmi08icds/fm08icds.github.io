@@ -10,7 +10,7 @@ const thisreq = d3.dsv(";", url);
 
 function  getMark(event){
   event.preventDefault();
-  d3.selectAll('tbody').remove();
+  d3.select('table#markTable').selectAll("tbody").remove();
   d3.select('div#markInfo').selectAll('p').remove();
   var mat = document.getElementById("mat").value;
   if (!mat) {
@@ -31,28 +31,28 @@ function  getMark(event){
           for (var j = 10; j < studentMark.length-1; j++) {
             html += "<td>" +Math.round(Number(studentMark[j]))+ '%</td>';
           }
-          html +='<th scope="row">' +Math.round(Number(studentMark[studentMark.length-1]))+ '</th>';
+          html +='<th scope="row">' +studentMark[studentMark.length-1]+ '</th>';
           html +="</tr>"
           d3.select('#markTable').style("visibility", "visible")
           .append("tbody")
             .html(html);
 
             if (studentMark[studentMark.length-1] === "5") {
-              phtml = "<p class='fw-light'> Sorry there are no homeworks for the student <spam>" +mat+ "</spam> on the github repositories.</p>";
-              phtml += '<p class="fw-light">Please, make sure you entered the right matriculation number or contact me at <a href="mailto:nonosaha@mis.mpg.de">nonosaha@mis.mpg.de</a> asap.</p>';
+              phtml = "<p class='fw-light'> Sorry, there is no homework for the matriculation number <spam>" +mat+ "</spam> on the GitHub repositories.</p>";
+              phtml += '<p class="fw-light">Please make sure you entered the correct matriculation number or contact me at <a href="mailto:nonosaha@mis.mpg.de">nonosaha@mis.mpg.de</a> ASAP.</p>';
               d3.select("div#markInfo").html(phtml);
 
             } else {
-              phtml = "<p class='fw-light'> Congratulation! and thanks for attending my class.</p>";
-              phtml += '<p class="fw-light">For any objections about your mark please, contact me at <a href="mailto:nonosaha@mis.mpg.de">nonosaha@mis.mpg.de</a>  asap.</p>';
+              phtml = "<p class='fw-light'> Congratulations, and thanks for attending my class.</p>";
+              phtml += '<p class="fw-light">For any objections about your mark, please contact me at  <a href="mailto:nonosaha@mis.mpg.de">nonosaha@mis.mpg.de</a> ASAP.</p>';
               d3.select("div#markInfo").html(phtml);
 
             }
 
         }else {
           d3.select('#markTable').style("visibility", "hidden");
-          phtml = "<p class='fw-light'> Sorry there are no homeworks for the student <spam>" +mat+ "</spam> on the github repositories.</p>";
-          phtml += '<p class="fw-light">Please, make sure you entered the right matriculation number or contact me at <a href="mailto:nonosaha@mis.mpg.de">nonosaha@mis.mpg.de</a> asap.</p>';
+          phtml = "<p class='fw-light'> Sorry, there is no homework for the matriculation number <spam>" +mat+ "</spam> on the GitHub repositories. </p>";
+          phtml += '<p class="fw-light">Please make sure you entered the correct matriculation number or contact me at <a href="mailto:nonosaha@mis.mpg.de">nonosaha@mis.mpg.de</a> ASAP.</p>';
           d3.select("div#markInfo").html(phtml);
         }
       });

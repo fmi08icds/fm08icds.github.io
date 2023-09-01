@@ -1,0 +1,7 @@
+.row{
+  --bs-gutter-x: 0rem;
+}
+
+.p-4{
+  padding: 0rem !important;
+}

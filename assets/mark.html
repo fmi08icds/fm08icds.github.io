@@ -9,6 +9,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link href="mark.css" rel="stylesheet" />
     <!-- <script src="https://d3js.org/d3.v4.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js">
 
@@ -23,7 +24,7 @@
           <form class="form-example needs-validation" id="formMark" novalidate>
             <h1>FMI08ICDS: <text class="fw-lighter fs-3 inline"> Introductory Computing for Data Science</text></h1>
             <p class="description fw-light">
-              Details on your marks computation are provided in the main course website.
+              Details on the computation of your marks are provided below, and the comments on your assignments can be found in your corresponding Gihub repositories.
             </p>
             <!-- Input fields -->
             <div class="form-group">
@@ -48,7 +49,7 @@
 
 
       </div>
-      <div class="row align-items-center mt-4 " >
+      <div class="row align-items-center mt-0 " >
 
         <div class="mx-auto col-10 col-md-8 col-lg-8">
           <table class="table table-hover" id="markTable">
@@ -83,7 +84,193 @@
           </div>
 
       </div>
-    </div>
+
+      <div class="row align-items-center mt-4" >
+        <div class="mx-auto col-10 col-md-8 col-lg-8">
+                <p class="fw-lighter">The different assessment items and their corresponding weights considered are listed in the following tables for each homework, group project,
+                   and average mark. For each assessment item, a mark between 1-100% is assigned, and the marks displayed in the above table are the averages weighted by the corresponding assessment values. </p>
+                <div class="d-flex flex-row justify-content-start">
+
+                  <div class="p-4">
+                    <h4 class="fw-light">Homeworks</h4>
+
+                  <table class="table">
+                  <thead>
+                      <tr class="header">
+                          <th>Assessment item</th>
+                          <th>Value</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+
+                      <tr>
+                          <td>Instructions</td>
+                          <td>20%</td>
+                      </tr>
+
+                      <tr>
+                          <td>Coding</td>
+                          <td>40%</td>
+                      </tr>
+
+                      <tr>
+                        <td>Testing</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                      <td>Results presentation</td>
+                      <td>20%</td>
+                  </tr>
+                  <tr>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+
+                  </tbody>
+                  </table>
+                  </div>
+                  <div class="p-4 mx-auto">
+                    <h4 class="fw-light">Group projects</h4>
+                    <p>
+                  <table class = "table">
+                  <thead>
+                      <tr class="header">
+                          <th >Assessment item</th>
+                          <th>Value</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+
+                      <tr>
+                          <td>Git structure and repository</td>
+                          <td>20%</td>
+                      </tr>
+
+                      <tr>
+                          <td>Slide organisation</td>
+                          <td>20%</td>
+                      </tr>
+
+                      <tr>
+                        <td>Content</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                      <td>Oral presentation</td>
+                      <td>20%</td>
+                  </tr>
+
+                  <tr>
+                    <td>Answers to questions</td>
+                    <td>20%</td>
+                </tr>
+
+                  </tbody>
+                  </table>
+                  </p>
+                  </div>
+                  <div class="p-4 mr-0">
+                    <h4 class='fw-light'> Average mark</h4>
+                  <table class="table">
+                  <thead>
+                      <tr class="header">
+                          <th>Assessment item</th>
+                          <th>Value</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+
+                      <tr>
+                          <td>Homeworks</td>
+                          <td>60%</td>
+                      </tr>
+
+                      <tr>
+                          <td>Group projects</td>
+                          <td>40%</td>
+                      </tr>
+
+                      <tr>
+                        <td>Course participation</td>
+                        <td>0%</td>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+                  </div>
+
+                </div>
+                <p class="fw-lighter"> The final mark is computed based on the German marking system and using the following table:</p>
+                <table class="table">
+                <thead>
+                    <tr class="header">
+                        <th>In %</th>
+                        <th>Deutsche Note</th>
+                        <th> Im Wortlaut</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>100.0</td>
+                        <td>1.0</td>
+                        <td>Sehr gut</td>
+                    </tr>
+
+                    <tr>
+                        <td>90.0 - 99.99</td>
+                        <td>1.3</td>
+                        <td>Sehr gut</td>
+                    </tr>
+
+                    <tr>
+                      <td>85.0 - 89.99</td>
+                      <td>1.7</td>
+                      <td>Gut</td>
+                  </tr>
+                  <tr>
+                    <td>80.0 - 84.99</td>
+                    <td>2.0</td>
+                    <td>Gut</td>
+                  </tr>
+                  <tr>
+                      <td>70.0 - 79.99</td>
+                      <td>2.3</td>
+                      <td>Gut</td>
+                  </tr>
+                  <tr>
+                      <td>65.0 - 69.99</td>
+                      <td>3.0</td>
+                      <td>Befriedigend</td>
+                  </tr>
+                  <tr>
+                      <td>60.0 - 64.99</td>
+                      <td>4.0</td>
+                      <td>Ausreichend</td>
+                  </tr>
+
+                  <tr>
+                      <td>0 - 59.99</td>
+                      <td>5.0</td>
+                      <td>Ungenügend</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            <p class="fw-lighter">  More details on the Deutsche note computation can be found on <a href="https://www.physgeo.uni-leipzig.de/fileadmin/Fakult%C3%A4t_PhysGeo/IfG/Studium/Ausland/Notenentsprechungen_Erasmus_103_NEU.pdf">University website of the physics departement.</a>
+            </p>
+              </div>
+
+        </div>
+      </div>
 
     <!-- Bootstrap Bundle with Popper -->
     <script
