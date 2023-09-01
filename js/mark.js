@@ -29,7 +29,7 @@ function  getMark(event){
 
           html = '<tr> <td>' +studentMark[1]+'</td> <td>'+studentMark[2]+'</td>';
           for (var j = 10; j < studentMark.length-1; j++) {
-            html += "<td>" +Math.round(Number(studentMark[j]))+ '%</td>';
+            html += "<td>" +Number(studentMark[j]).toFixed(1)+ '%</td>';
           }
           html +='<th scope="row">' +studentMark[studentMark.length-1]+ '</th>';
           html +="</tr>"
