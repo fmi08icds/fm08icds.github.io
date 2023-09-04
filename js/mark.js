@@ -1,6 +1,6 @@
 
 
-var url = "https://fmi08icds.github.io/js/marks.csv";
+var url = "https://fmi08icds.github.io/assets/marks.csv";
 var mat = document.getElementById("mat").value;
 if (!mat) {
   d3.select('#markTable').style("visibility", "hidden");
